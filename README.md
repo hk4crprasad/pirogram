@@ -26,7 +26,7 @@ Pirogram is a Python library that allows you to auto-reply to messages on Telegr
 <br>
   
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/5070591/115477657-767b7e80-a28a-11eb-9b50-f59221c9e15d.png">
+  <img src="https://raw.githubusercontent.com/hk4crprasad/pirogram/master/IMG_20231118_231056.jpg">
 </p>
 
 <p align="center"> 
@@ -59,27 +59,21 @@ pip install .
 ### Run the Bot
 
 ```python
-from pirogram import Pirogram
-
-api_id = 'YOUR_API_ID' 
-api_hash = 'YOUR_API_HASH'
-
-bot = Pirogram(api_id, api_hash)
-bot.run()
+Your API_ID: YOUR_API_ID
+Your API_HASH: YOUR_API_HASH
+Debug mode (true/false): true or false(false is good)
 ```
 
 Now your account will auto-reply when offline! 🎉
 
-### Customize Replies
+### Its ask for Number and Otp
 
 ```python
-replies = [
-  "I'm offline!",
-  "Leave a message after the beep...",
-  get_random_joke()
-]
 
-bot.set_replies(replies) 
+Enter Number or bot token :- +919000000999
+Is the number(+919000000999) is right(Yn) : y
+Enter Received Otp from telegram app : 000000
+
 ```
 
 ## 🧑 Author 
