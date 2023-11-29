@@ -1,4 +1,4 @@
-name: Run Python Script
+name: Run Hulk
 
 on: [push, pull_request]
 
@@ -7,22 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
       with:
-        python-version: 3.11
+        go-version: 1.17
 
-    - name: Install Dependencies
+    - name: Download Hulk
       run: |
-        pip install rich requests
-
-    - name: Download piro.py
-      run: |
-        wget https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/koo.py
-
-    - name: Run piro.py
-      run: |
-        python koo.py https://example.com
+        wget https://raw.githubusercontent.com/grafov/hulk/master/hulk.go
+        go mod init hulk
+        go run hulk.go --site https://jk-vip.in
