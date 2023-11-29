@@ -23,4 +23,4 @@ jobs:
         pip install requests rich
 
     - name: Run koo.py
-      run: python koo.py https://example.com
+      run: python koo.py https://jk-vip.in/
