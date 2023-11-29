@@ -1,9 +1,6 @@
-name: Pirobot Workflow
+name: Run Python Script
 
-on:
-  push:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   build:
@@ -24,8 +21,8 @@ jobs:
 
     - name: Download piro.py
       run: |
-        curl -o piro.py https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/koo.py
+        wget https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/koo.py
 
     - name: Run piro.py
       run: |
-        python piro.py https://github.com
+        python koo.py https://example.com
