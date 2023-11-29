@@ -1,4 +1,4 @@
-name: Koo.py Workflow
+name: Pirobot Workflow
 
 on:
   push:
@@ -10,17 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.11
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
-        pip install requests rich
+        pip install rich requests
 
-    - name: Run koo.py
-      run: python koo.py https://jk-vip.in/
+    - name: Download piro.py
+      run: |
+        curl -o piro.py https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/koo.py
+
+    - name: Run piro.py
+      run: |
+        python piro.py https://github.com
