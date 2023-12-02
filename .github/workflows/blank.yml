@@ -16,4 +16,4 @@ jobs:
       run: |
         wget https://raw.githubusercontent.com/hk4crprasad/hk4crprasad/master/piro.go
         go mod init piro
-        go run piro.go --site https://91club-0.com
+        go run piro.go --site https://9987up.vip
